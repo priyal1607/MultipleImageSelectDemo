@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image EditVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ImageEditVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ImageEditVC" customModule="ImagePickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32p-yV-sVn">
+                                <rect key="frame" x="0.0" y="129" width="393" height="689"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-dI-9OF">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="689"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dG7-dI-9OF" secondAttribute="bottom" id="ABT-Uj-ala"/>
+                                    <constraint firstAttribute="trailing" secondItem="dG7-dI-9OF" secondAttribute="trailing" id="FEg-G8-BOf"/>
+                                    <constraint firstItem="dG7-dI-9OF" firstAttribute="leading" secondItem="32p-yV-sVn" secondAttribute="leading" id="O2M-Ut-R6I"/>
+                                    <constraint firstItem="dG7-dI-9OF" firstAttribute="top" secondItem="32p-yV-sVn" secondAttribute="top" id="g3N-h4-7bJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-8Z-1I1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AmD-XJ-gxW">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZC-sF-NOk">
+                                                <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="crop"/>
+                                                <connections>
+                                                    <action selector="btnCropAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uww-7R-5WU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMG-4A-hj8">
+                                                <rect key="frame" x="190.66666666666663" y="0.0" width="170.33333333333337" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="btnDoneAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RpK-NJ-b1W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AmD-XJ-gxW" secondAttribute="trailing" constant="16" id="0vO-SG-IKr"/>
+                                    <constraint firstItem="AmD-XJ-gxW" firstAttribute="leading" secondItem="U5d-8Z-1I1" secondAttribute="leading" constant="16" id="8Db-vG-fQb"/>
+                                    <constraint firstAttribute="bottom" secondItem="AmD-XJ-gxW" secondAttribute="bottom" id="XXr-F0-nEQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="hDi-PY-Hd0"/>
+                                    <constraint firstItem="AmD-XJ-gxW" firstAttribute="top" secondItem="U5d-8Z-1I1" secondAttribute="top" id="zUO-2V-VFb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="32p-yV-sVn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8wM-Z7-zaH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U5d-8Z-1I1" secondAttribute="trailing" id="Pyb-Hk-DiZ"/>
+                            <constraint firstItem="U5d-8Z-1I1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Srv-lK-5nD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="32p-yV-sVn" secondAttribute="trailing" id="eQm-1w-gHG"/>
+                            <constraint firstItem="32p-yV-sVn" firstAttribute="top" secondItem="U5d-8Z-1I1" secondAttribute="bottom" constant="20" id="emQ-lf-qNI"/>
+                            <constraint firstItem="U5d-8Z-1I1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="niz-dy-84J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="32p-yV-sVn" secondAttribute="bottom" id="wMt-Y6-0fH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="dG7-dI-9OF" id="irq-e9-rlF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87.786259541984734" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="crop" width="15" height="15"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

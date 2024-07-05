@@ -1,0 +1,20 @@
+PODS:
+  - ABVideoRangeSlider (0.1.5)
+  - VideoTrim (0.1.5)
+
+DEPENDENCIES:
+  - ABVideoRangeSlider
+  - VideoTrim
+
+SPEC REPOS:
+  trunk:
+    - ABVideoRangeSlider
+    - VideoTrim
+
+SPEC CHECKSUMS:
+  ABVideoRangeSlider: f2b6d894170bd0951693de4c1ad625f7f9f8b6a5
+  VideoTrim: 241d3383f194970ad7542015a0cc92450abc69b6
+
+PODFILE CHECKSUM: c9e0b91fd317512210e84bef1ddad81d04be29c2
+
+COCOAPODS: 1.13.0
